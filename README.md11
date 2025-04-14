@@ -1,0 +1,70 @@
+🔍 Description
+This project presents a chatbot designed to classify user intents using a fine-tuned DistilBERT model on the CLINC150 "out-of-scope" dataset. The system is capable of understanding natural language input (text or voice), classifying it into one of 150 in-scope categories—or detecting it as out-of-scope—based on contextual understanding using transformer-based models.
+
+Developed with a focus on combining modern NLP models with a user-friendly interface, the chatbot is deployed through a Streamlit application and integrates voice input using the SpeechRecognition library.
+
+🚀 Features
+✅ Multi-class intent classification (150+1 classes)
+
+✅ Fine-tuned distilbert-base-uncased model
+
+✅ Voice input using microphone (SpeechRecognition)
+
+✅ Web interface using Streamlit
+
+✅ ~89% accuracy on held-out test set
+
+✅ Handles both typed and spoken queries
+
+🗂 Dataset
+Source: clinc_oos from Hugging Face datasets
+
+Structure:
+
+text: The user query
+
+intent: Intent category
+
+Why this dataset? It includes 150 real-world intents + 1 out-of-scope label, making it ideal for testing classification boundaries.
+
+🧠 Model Details
+Model: DistilBERT (distilbert-base-uncased)
+
+Framework: Hugging Face Transformers
+
+Training API: Trainer class
+
+Metrics: Accuracy, Precision, Recall, F1-score
+
+Final Accuracy: ~89%
+
+🧪 Preprocessing
+Tokenization using DistilBertTokenizerFast
+
+No need for stemming or lemmatization due to tokenizer design
+
+Lowercasing applied
+
+🖥️ User Interface
+Built with Streamlit
+
+Supports voice queries via microphone input
+
+Interactive display of predicted intent
+
+📈 Evaluation
+Tested on held-out test set
+
+Manual tests on edge cases
+
+Confusion matrix used for analysis
+
+🌱 Future Work
+Add fallback rules for uncertain predictions
+
+Explore BERT/RoBERTa for higher accuracy
+
+Integrate response generation (not just intent detection)
+
+Deploy on Streamlit Cloud or Hugging Face Spaces
+
